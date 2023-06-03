@@ -156,7 +156,11 @@ const DisplayTodos = () => {
         })
 
         listDeleteButton.addEventListener('click', (e) => {
+
+            todos = JSON.parse(localStorage.getItem('todos')) || []
+
             todos = todos.filter(t => t.state.split(" ")[1] !== "Completed")
+
             localStorage.setItem('todos', JSON.stringify(todos))
             DisplayTodos()
 
