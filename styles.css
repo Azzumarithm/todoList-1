@@ -18,7 +18,7 @@
     --check: #a5a9b5;
     --hover-state-text: #4a78d1;
     --background-color: #fafafa;
-    --border-bottom: #ceced1;
+    --border-bottom: #ceced188;
     --background-image: url(images/bg-desktop-light.jpg);
     --theme-icon: url(images/icon-sun.svg);
     --box-shadow: #e5e6eb;
@@ -36,7 +36,7 @@
     --check: #eef1ff;
     --hover-state-text: #4a78d1;
     --background-color: #181824;
-    --border-bottom: #eae9ed;
+    --border-bottom: #eae9ed9a;
     --background-image: url(images/bg-desktop-dark.jpg);
     --theme-icon: url(images/icon-moon.svg);
     --box-shadow: #101119;
@@ -69,7 +69,7 @@ body {
 
 .app{
     min-height: 100vh;
-    margin-bottom: 100px;
+    margin-bottom: 0px 10px 100px 10px;
     
 }
 
@@ -344,4 +344,39 @@ button{
     margin-top: 50px;
     font-family: 'Josefin Sans';
     color: var(--reorder);
+}
+
+.mobile-state-buttons{
+    display: none;
+}
+
+
+@media (max-width: 500px){
+    .title-todo{
+        gap: 13rem;
+    }
+
+    .desktop-state-buttons{
+        display: none;
+    }
+
+    .state-clear {
+        box-shadow: none;
+    }
+    
+    .mobile-state-buttons{
+        display: block;
+        font-family: 'Josefin Sans';
+        color: var(--todoItem-text);
+        font-weight: 700;
+        background-color: var(--section-background-color);
+        margin-top: 20px;
+        padding: 18px;
+        color: var(--state-text);
+        transition: 0.01s linear;
+        border-radius: 5px 5px 5px 5px;
+        text-align: center;
+        box-shadow: 0px 35px 40px var(--box-shadow);
+    }
+    
 }
