@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Todo app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <img class="background-image"src="images/bg-desktop-dark.jpg" alt="">
+  <main>
+    
+    <section class="todo-container">
+      <div class="title-container">
+        <h1 class="title-text">TODO</h2>
+        <img src="images/icon-sun.svg" alt="" class="symbol light-symbol">
+        <img src="images/icon-moon.svg" alt="" class="symbol dark-symbol">
+      </div>
+
+      <section class="create-todo">
+        <form class="new-todo-form">
+          <div class="create">
+            
+            <div class="create-todo-content">
+              <input type="text" placeholder="e.g Get some food" name="content" id="input-content" >
+            </div>
+  
+            <!-- <div class="actions">
+              <button class="delete">X</button>
+            </div> -->
+
+          </div> 
+        </form>
+      </section>
+
+      <section>
+        <div class="todo-list">
+          <!-- <div class="todo-item">
+            <label>
+              <input type="checkbox">
+              <span class="bubble"></span>
+            </label>
+            
+            <div class="todo-content">
+              <input type="text" value="Study" data-state="" readonly>
+            </div>
+    
+            <div class="actions">
+              <img src="images/icon-cross.svg" alt="" class="cross">
+            </div>
+          </div>
+          <div class="todo-item">
+            <label>
+              <input type="checkbox">
+              <span class="bubble"></span>
+            </label>
+            
+            <div class="todo-content">
+              <input type="text" name="All" value="Make a video" readonly>
+            </div>
+    
+            <div class="actions">
+              <img src="images/icon-cross.svg" alt="" class="cross">
+            </div>
+          </div> -->
+          <div class="todo-options">
+            <div class="items-left state">5 Items Left</div>
+            <div class="states">
+              <div class="all state">All</div>
+              <div class="active state">Active</div>
+              <div class="completed state">Completed</div>
+            </div>
+            <div class="clear-completed state">Clear Completed</div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+
+  </main>
+
+
+  <!-- Todo
+
+  items left
+
+  All
+  Active 
+  Completed
+
+  Clear Completed
+
+  Drag and drop to reorder list
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <script src="script.js"></script>
+</body>
+</html>
