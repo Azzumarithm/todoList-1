@@ -351,9 +351,9 @@ button{
 }
 
 
-@media (max-width: 500px){
+@media (max-width: 600px){
     .title-todo{
-        gap: 13rem;
+        gap: 10rem;
     }
 
     .desktop-state-buttons{
