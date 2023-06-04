@@ -147,29 +147,30 @@ const DisplayTodos = () => {
             DisplayTodos()
         })
 
+        
+        
         deleteButton.addEventListener('click', e => {
             todos = todos.filter(t => t != todo)
             localStorage.setItem('todos', JSON.stringify(todos))
             DisplayTodos()
-
-
+    
+    
         })
-
-        listDeleteButton.addEventListener('click', (e) => {
-
-            todos = JSON.parse(localStorage.getItem('todos')) || []
-
-            todos = todos.filter(t => t.state.split(" ")[1] !== "Completed")
-
-            localStorage.setItem('todos', JSON.stringify(todos))
-            DisplayTodos()
-
-        })
-
         
     })
     
     Drag()
+
+    listDeleteButton.addEventListener('click', (e) => {
+
+        todos = JSON.parse(localStorage.getItem('todos')) || []
+
+        todos = todos.filter(t => t.state.split(" ")[1] !== "Completed")
+
+        localStorage.setItem('todos', JSON.stringify(todos))
+        DisplayTodos()
+
+    })
     
     const count = todos.reduce((previous, todo) => {
         return previous + todo.number
@@ -210,7 +211,7 @@ const Drag = () => {
     listContainer.addEventListener('dragover', e => {
         e.preventDefault()
         const afterElement = getDragAfterElement(listContainer, e.clientY)
-        console.log(afterElement)
+        
         const draggable = document.querySelector('.dragging')
         if (draggable !== null) {
             if (afterElement == null) {
@@ -256,7 +257,7 @@ const Drag = () => {
 
 const DarkTheme = () => {
     let darkMode = localStorage.getItem("darkMode") || ''
-    console.log(darkMode)
+    
     let darkModeToggle = document.querySelector('.theme')
 
     const themeIcon = document.querySelector('.theme')
