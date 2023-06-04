@@ -166,10 +166,10 @@ const DisplayTodos = () => {
 
         })
 
-        Drag()
         
     })
-
+    
+    Drag()
     
     const count = todos.reduce((previous, todo) => {
         return previous + todo.number
